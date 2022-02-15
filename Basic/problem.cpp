@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
-
+#define PI 3.1416
 int main()
 {
-    int a, b;
-    float avg;
-    cout << "Enter Values : ";
-    cin >> a >> b;
-    avg = (a + b) / 2.0;
-    cout << "Average " << avg;
+    float r;
+    float area;
+    cout << "Enter Radius : ";
+    cin >> r;
+    area = PI * (r * r);
+    cout << "Area of Circle " << area;
 
     return 0;
 }
