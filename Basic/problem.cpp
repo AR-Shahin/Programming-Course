@@ -3,13 +3,14 @@ using namespace std;
 #define PI 3.1416
 int main()
 {
-    float r, c;
-    float area;
-    cout << "Enter Radius : ";
-    cin >> r;
-    area = PI * (r * r);
-    cout << "Area of Circle " << area;
+    int a, b;
+    cin >> a >> b;
 
-    float f = (c * (9 / 2.0) + 32);
+    int temp;
+    temp = a; // a er data
+    a = b;    // b er data
+    b = temp; // a er data
+
+    cout << "A = " << a << " B = " << b;
     return 0;
 }
