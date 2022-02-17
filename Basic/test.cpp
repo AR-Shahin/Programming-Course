@@ -4,14 +4,18 @@ using namespace std;
 
 int main()
 {
-    float salary, house_rent, medical, technical, gross;
+    int a, b, c, d, e;
+    cin >> a; // 12345
 
-    cin >> salary;
+    b = a % 10; // 12345 % 10 = 5
+    a = a / 10; // 1234
+    c = a % 10; // 1234 % 10 = 4
+    a = a / 10; // 123
+    d = a % 10; // 3
+    a = a / 10; // 12
+    e = a % 10; // 2
+    a = a / 10; // 1
 
-    house_rent = salary * 0.3;
-    medical = salary * 0.05;
-    technical = 1000;
-    gross = salary + house_rent + medical + technical;
-    cout << "Gross Salary : " << gross;
+    cout << b << c << d << e << a;
     return 0;
 }
