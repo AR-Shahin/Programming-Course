@@ -4,18 +4,34 @@ using namespace std;
 
 int main()
 {
-    int a, b, c, d, e;
-    cin >> a; // 12345
+    // int a = 20, b = 10, c = 5, d = 5;
 
-    b = a % 10; // 12345 % 10 = 5
-    a = a / 10; // 1234
-    c = a % 10; // 1234 % 10 = 4
-    a = a / 10; // 123
-    d = a % 10; // 3
-    a = a / 10; // 12
-    e = a % 10; // 2
-    a = a / 10; // 1
+    // if (a % 3 == 0)
+    // {
+    //     cout << "FullFilled";
+    //     // this block will work if the conditions is fullfilled
+    // }
+    // else
+    // {
+    //     cout << "Not ";
 
-    cout << b << c << d << e << a;
+    //     // this block will work if the conditions isn't fullfilled
+    // }
+
+    // string x = a % 3 == 0 ? "Fullfilled" : "Not!";
+    // cout << x;
+    int x = 10, y = 5;
+    switch (100)
+    {
+    case 10:
+        cout << "X Worked!";
+        break;
+    case 5:
+        cout << "Y Worked!";
+        break;
+    default:
+           cout << "Defalut Worked!";
+        break;
+    }
     return 0;
 }
