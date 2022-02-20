@@ -6,16 +6,17 @@ int main()
     int number;
     cin >> number;
 
-    // if (number % 2 == 0)
-    // {
-    //     cout << "Even";
-    // }
-    // else
-    // {
-    //     cout << "Odd";
-    // }
-
-    string r = number % 2 == 0 ? "Even" : "Odd";
-    cout << r;
+    if (number > 0)
+    {
+        cout << "Positive!";
+    }
+    else if (number < 0)
+    {
+        cout << "Negative!";
+    }
+    else
+    {
+        cout << "Zero!";
+    }
     return 0;
 }
