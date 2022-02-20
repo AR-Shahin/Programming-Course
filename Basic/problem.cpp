@@ -3,20 +3,16 @@ using namespace std;
 #define PI 3.1416
 int main()
 {
-    int number;
-    cin >> number;
+    int year;
+    cin >> year;
 
-    if (number > 0)
+    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
     {
-        cout << "Positive!";
-    }
-    else if (number < 0)
-    {
-        cout << "Negative!";
+        cout << "Leaf Year";
     }
     else
     {
-        cout << "Zero!";
+        cout << "Not Leaf Year";
     }
     return 0;
 }
