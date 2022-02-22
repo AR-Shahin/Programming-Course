@@ -4,34 +4,21 @@ using namespace std;
 
 int main()
 {
-    // int a = 20, b = 10, c = 5, d = 5;
+    char ch;
+    cin >> ch;
 
-    // if (a % 3 == 0)
-    // {
-    //     cout << "FullFilled";
-    //     // this block will work if the conditions is fullfilled
-    // }
-    // else
-    // {
-    //     cout << "Not ";
-
-    //     // this block will work if the conditions isn't fullfilled
-    // }
-
-    // string x = a % 3 == 0 ? "Fullfilled" : "Not!";
-    // cout << x;
-    int x = 10, y = 5;
-    switch (100)
+    if (ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z')
     {
-    case 10:
-        cout << "X Worked!";
-        break;
-    case 5:
-        cout << "Y Worked!";
-        break;
-    default:
-           cout << "Defalut Worked!";
-        break;
+        cout << "Alphabet";
     }
+    else if (ch >= '0' && ch <= '9')
+    {
+        cout << "Digit";
+    }
+    else
+    {
+        cout << "Special Character!";
+    }
+
     return 0;
 }
