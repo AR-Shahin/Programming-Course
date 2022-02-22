@@ -4,21 +4,26 @@ using namespace std;
 
 int main()
 {
-    char ch;
-    cin >> ch;
+    double basic, H, M, gross;
+    cin >> basic;
 
-    if (ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z')
+    if (basic >= 10000)
     {
-        cout << "Alphabet";
+        H = basic * 0.2;
+        M = basic * 0.5;
     }
-    else if (ch >= '0' && ch <= '9')
+    else if (basic > 10000 && basic <= 30000)
     {
-        cout << "Digit";
+        H = basic * 0.3;
+        M = basic * 0.55;
     }
     else
     {
-        cout << "Special Character!";
+        H = basic * 0.35;
+        M = basic * 0.6;
     }
 
+    gross = basic + H + M;
+    cout << gross;
     return 0;
 }
