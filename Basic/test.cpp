@@ -4,26 +4,27 @@ using namespace std;
 
 int main()
 {
-    double basic, H, M, gross;
-    cin >> basic;
 
-    if (basic >= 10000)
+    int a, b;
+    char op;
+    cin >> a >> b;
+    cin >> op;
+    int result;
+    switch (op)
     {
-        H = basic * 0.2;
-        M = basic * 0.5;
+    case '+':
+        result = a + b;
+        break;
+    case '-':
+        result = a - b;
+        break;
+    case '*':
+        result = a * b;
+        break;
+    case '/':
+        result = a / b;
+        break;
     }
-    else if (basic > 10000 && basic <= 30000)
-    {
-        H = basic * 0.3;
-        M = basic * 0.55;
-    }
-    else
-    {
-        H = basic * 0.35;
-        M = basic * 0.6;
-    }
-
-    gross = basic + H + M;
-    cout << gross;
+    cout << result;
     return 0;
 }
