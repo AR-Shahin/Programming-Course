@@ -3,13 +3,11 @@ using namespace std;
 #define PI 3.1416
 int main()
 {
-    for (int i = 1; i <= 10; i++)
+    int sum = 0;
+    for (int i = 1; i <= 5; i++)
     {
-        if (i == 5)
-        {
-            break;
-        }
-        cout << i << endl;
+        sum = sum + i;
     }
+    cout << sum;
     return 0;
 }
