@@ -3,19 +3,13 @@ using namespace std;
 #define PI 3.1416
 int main()
 {
-    int n = 10;
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= 10; i++)
     {
-        for (int j = 0; j < n; j++)
+        if (i == 5)
         {
-            if (j > i)
-            {
-
-                continue;
-            }
-            cout << i * j << " ";
+            break;
         }
-        cout << "\n";
+        cout << i << endl;
     }
     return 0;
 }

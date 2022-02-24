@@ -5,30 +5,20 @@ using namespace std;
 int main()
 {
 
-    int month;
-    cin >> month;
-    switch (month)
-    {
-    case 1:
-    case 3:
-    case 5:
-    case 7:
-    case 8:
-    case 10:
-    case 12:
-        cout << 31;
-        break;
-    case 2:
-        cout << 28;
-        break;
-    case 4:
-    case 6:
-    case 9:
-    case 11:
-        cout << 30;
-        break;
-    default:
-        cout << "Invalid Input!";
-        return 0;
-    }
+    // int i = 1;
+    // while (i != 5)
+    // {
+    //     cout << "Hello World!" << endl;
+    //     i++;
+    // }
+
+    // for (int i = 1; i != 5; i++)
+    // {
+    //     cout << "Hello World!" << endl;
+    // }
+    // int i = 1;
+    // do
+    // {
+    //     cout << "Hello World!" << endl;
+    // } while (i != -1);
 }
