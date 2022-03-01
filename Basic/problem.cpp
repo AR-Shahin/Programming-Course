@@ -4,12 +4,11 @@ using namespace std;
 int main()
 {
 
-    float sum = 1, n;
+    int n;
     cin >> n;
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i <= 10; i++)
     {
-        sum *= i;
+        cout << i << " * " << n << " = " << i * n << endl;
     }
-    cout << "Sum = " << sum;
     return 0;
 }
