@@ -4,26 +4,16 @@ using namespace std;
 int main()
 {
 
-    int n;
-    n = 5;
+    int n, sum = 0;
+    cin >> n;
 
-    for (int i = 1; i <= n; i++)
+    while (n != 0)
     {
-        int space = n - i;
-        for (int j = 1; j <= space; j++)
-        {
-            cout << " ";
-        }
-
-        int star = 2 * i - 1;
-
-        for (int j = 1; j <= star; j++)
-        {
-            cout << "*";
-        }
-
-        cout << endl;
+        int rem = n % 10;
+        sum += rem;
+        n = n / 10;
     }
 
+    cout << "Sum of Digit : " << sum;
     return 0;
 }
