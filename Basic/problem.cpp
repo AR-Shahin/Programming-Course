@@ -4,16 +4,16 @@ using namespace std;
 int main()
 {
 
-    int n, sum = 0;
+    int n, rev = 0;
     cin >> n;
 
     while (n != 0)
     {
         int rem = n % 10;
-        sum += rem;
+        rev = rev * 10 + rem;
         n = n / 10;
     }
 
-    cout << "Sum of Digit : " << sum;
+    cout << "Reverse : " << rev;
     return 0;
 }
