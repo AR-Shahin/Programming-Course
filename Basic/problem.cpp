@@ -5,10 +5,16 @@ int main()
 {
 
     int n;
-    cin >> n;
-    for (int i = 1; i <= 10; i++)
+    n = 5;
+
+    for (int i = 1; i <= 5; i++)
     {
-        cout << i << " * " << n << " = " << i * n << endl;
+        for (int j = 1; j <= 5; j++)
+        {
+            cout << j << " ";
+        }
+        cout << "\n";
     }
+
     return 0;
 }
