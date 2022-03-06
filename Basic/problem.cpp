@@ -7,13 +7,22 @@ int main()
     int n;
     n = 5;
 
-    for (int i = 1; i <= 5; i++)
+    for (int i = 1; i <= n; i++)
     {
-        for (int j = 1; j <= 5; j++)
+        int space = n - i;
+        for (int j = 1; j <= space; j++)
         {
-            cout << j << " ";
+            cout << " ";
         }
-        cout << "\n";
+
+        int star = 2 * i - 1;
+
+        for (int j = 1; j <= star; j++)
+        {
+            cout << "*";
+        }
+
+        cout << endl;
     }
 
     return 0;
