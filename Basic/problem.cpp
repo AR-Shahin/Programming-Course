@@ -1,19 +1,30 @@
 #include <iostream>
 using namespace std;
-#define PI 3.1416
+
+bool isPrime(int n)
+{
+    for (int i = 2; i < n; i++)
+    {
+        if (n % i == 0)
+        {
+            return true;
+        }
+
+        return false;
+    }
+}
 int main()
 {
 
-    int n, rev = 0;
-    cin >> n;
-
-    while (n != 0)
+    int n = 11;
+    if (isPrime(n))
     {
-        int rem = n % 10;
-        rev = rev * 10 + rem;
-        n = n / 10;
+        cout << "Not Prime";
+    }
+    else
+    {
+        cout << "Prime!";
     }
 
-    cout << "Reverse : " << rev;
     return 0;
 }
