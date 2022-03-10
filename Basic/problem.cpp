@@ -79,10 +79,33 @@ bool isStrong(int n)
     }
 }
 
+void series(int n)
+{
+    float sum = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        sum += ((i * i) / fact(i));
+    }
+
+    cout << sum;
+}
+
+int exponent(int a, int n)
+{
+    int sum = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        sum *= a;
+    }
+
+    return sum;
+}
 int main()
 {
     // fibonacci(8);
 
-    cout << isStrong(145);
+    // series(3);
+
+    cout << exponent(2, 0);
     return 0;
 }
