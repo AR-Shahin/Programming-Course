@@ -21,6 +21,38 @@ void localAndGlobal(int a, int b)
     cout << c << endl;
 }
 
+void fibonacci(int n)
+{
+    if (n == 1)
+    {
+        cout << 0;
+    }
+    else if (n == 2)
+    {
+        cout << 0 << " " << 1;
+    }
+    else
+    {
+        int first = 0, second = 1;
+        cout << first << " " << second << " ";
+
+        for (int i = 1; i <= n - 2; i++)
+        {
+            int fibo = first + second;
+            cout << fibo << " ";
+            first = second;
+            second = fibo;
+        }
+    }
+}
+
+typedef struct info
+{
+    string name;
+
+    int roll;
+} Info;
+info x[] = {{"shain", 21}, {"omi", 5}};
 int main()
 {
     // string name = "Shahin";
@@ -31,11 +63,13 @@ int main()
     // int result = addTwoValue(10, 20);
     // cout << result;
 
-    int a = 10, b = 20;
-    localAndGlobal(a, b);
-    c = 500;
-    cout << c << endl;
-    cout << "A " << a << endl;
-    cout << "B " << b << endl;
+    // int a = 10, b = 20;
+    // localAndGlobal(a, b);
+    // c = 500;
+    // cout << c << endl;
+    // cout << "A " << a << endl;
+    // cout << "B " << b << endl;
+    // fibonacci(8);
+    cout << sizeof(x[1]);
     return 0;
 }

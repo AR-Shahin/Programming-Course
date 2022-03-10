@@ -1,30 +1,33 @@
 #include <iostream>
 using namespace std;
 
-bool isPrime(int n)
+void fibonacci(int n)
 {
-    for (int i = 2; i < n; i++)
+    int first = 0, second = 1;
+    if (n == 1)
     {
-        if (n % i == 0)
-        {
-            return true;
-        }
-
-        return false;
+        cout << first;
     }
-}
-int main()
-{
-
-    int n = 11;
-    if (isPrime(n))
+    else if (n == 2)
     {
-        cout << "Not Prime";
+        cout << first << " " << second << " ";
     }
     else
     {
-        cout << "Prime!";
-    }
+        cout << first << " " << second << " ";
 
+        for (int i = 1; i <= n - 2; i++)
+        {
+            int fibo = first + second;
+            cout << fibo << " ";
+            first = second;
+            second = fibo;
+        }
+    }
+}
+
+int main()
+{
+    fibonacci(8);
     return 0;
 }
