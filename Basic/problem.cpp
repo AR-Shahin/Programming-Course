@@ -48,10 +48,41 @@ bool isPerfect(int n)
     }
 }
 
+int fact(int n)
+{
+    int sum = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        sum *= i;
+    }
+    return sum;
+}
+
+bool isStrong(int n)
+{
+    int temp = n;
+    int sum = 0;
+    while (n != 0)
+    {
+        int rem = n % 10;
+        sum = sum + fact(rem);
+        n = n / 10;
+    }
+
+    if (temp == sum)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 int main()
 {
     // fibonacci(8);
 
-    cout << isPerfect(5);
+    cout << isStrong(145);
     return 0;
 }
