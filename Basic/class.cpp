@@ -2,32 +2,27 @@
 #include <iostream>
 using namespace std;
 
-void shakib0()
+void display(int A[], int size)
 {
-
-    cout << "abc";
+    for (int i = 0; i < size; i++)
+    {
+        cout << A[i] << " ";
+    }
 }
-void shakib1()
-{
 
-    cout << "test";
-}
 int main()
 {
-    int TOSS;
-    cout << "Enter Number : "; // printf("ddd");
-    cin >> TOSS;               // scanf(%)
+    int arr[5];
 
-    if (TOSS == 0)
-    {
-
-        // work
-        shakib0();
-    }
-    else if (TOSS == 1)
-    {
-        // work
-        shakib1();
-    }
-    return 0;
+    arr[0] = 10;
+    arr[1] = 20;
+    arr[2] = 30;
+    arr[3] = 40;
+    arr[4] = 50;
+    display(arr, 5);
+    int brr[] = {10,
+                 20,
+                 30,
+                 40,
+                 50};
 }
