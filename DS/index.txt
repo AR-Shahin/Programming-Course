@@ -1,0 +1,8 @@
+# Data Structure
+    -> Array List
+    -> Link List
+    -> Stack
+    -> Queue
+    -> Tree
+    -> Heap
+    
