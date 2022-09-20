@@ -1,5 +1,5 @@
 #include<iostream>
-#define size 3
+#define size 5
 using namespace std;
 
 int arr[size];
@@ -43,17 +43,25 @@ void delete_data(int val){
         }
     }
 }
+
+void update(int oldValue, int newValue){
+    int index = search(oldValue);
+    arr[index] = newValue;
+}
+
 int main(){
     display();
     insert(10);
     insert(20);
     insert(30);
-    //insert(10);
+    insert(40);
+    insert(50);
+
     display();
-    delete_data(30);
+  
+    update(30,60);
     cout<<endl;
     display();
-
     //cout<<search(20);
     return 0;
 }
