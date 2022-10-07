@@ -15,7 +15,9 @@ int count = 0;
 void initial(){
     head = 0;
 }
-
+int lengthOfList(){
+    return count;
+}
 void insertLast(int val){
     node *newNode;
 
@@ -45,6 +47,34 @@ void insertFirst(int val){
         count ++;
     }
 }
+
+void insertSpecificPosition(int val,int pos){
+    if(pos == 0){
+        cout<<"Position can't be zero!";
+    }
+    else if(pos == 1){
+        insertFirst(val);
+    }
+    else if(lengthOfList() < pos){
+        cout<<"Invalid Position!!";
+    }else{
+        int index = 1;
+        node *temp,*newNode;
+
+        temp = head;
+        while (index < pos - 1)
+        {
+            temp = temp->next;
+            index ++;
+        }
+        newNode = new node;
+        newNode->data = val;
+        newNode->next = temp->next;
+        temp->next = newNode;
+        count ++;
+    }
+}
+
 void display(){
     if(head == 0){
         cout<<"empty\n";
@@ -70,6 +100,7 @@ void deleteFirstNode(){
 
         free(temp);
     }
+    count --;
 }
 
 void deleteLastNode(){
@@ -89,11 +120,37 @@ void deleteLastNode(){
         else{
             prev->next = 0;
         }
-
+    count --;
         free(temp);
     }
 }
 
+void deleteSpecificPosition(int pos){
+    if(head == 0){
+        cout<<"empty list!";
+    }
+    else if(pos == 1){
+        deleteFirstNode();
+    }
+    else if(lengthOfList() < pos){
+        cout<<"Invalid Position!!";
+    }
+    else{
+        int index = 1;
+        node *temp,*prevNode,*nextNode;
+        temp = head;
+
+        while(index < pos -1){
+            temp = temp->next;
+            index ++;
+        }
+        prevNode = temp;
+        nextNode = prevNode->next;
+        temp->next = nextNode->next;
+        free(nextNode);
+        count --;
+    }
+}
 node *getNodeByValue(int val){
     node *temp;
 
@@ -108,16 +165,50 @@ node *getNodeByValue(int val){
     }
 
 }
+
+int getMaximumValue(){
+    int max = INT_MIN;
+    node *temp;
+    temp = head;
+    while(temp != 0){
+        if(max < temp->data){
+            max = temp->data;
+        }
+        temp = temp->next;
+    }
+
+    return max;
+}
+
+// Reverse the link list
+void reverse(){
+    node *prev = NULL;
+    node *current = head;
+    node *next = NULL;
+    while (current != NULL)
+    {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    head = prev;
+}
 int main()
 {
     initial();
     insertFirst(10);
     insertFirst(20);
     insertFirst(30);
-     display();
-    // deleteLastNode();
+    insertFirst(40);
+    display();
+    reverse();
+    display();
+
+    // deleteSpecificPosition(3);
+    // insertSpecificPosition(500,2);
     // display();
-    node *abc = getNodeByValue(20);
-    cout<<abc->data;
+    // cout<<getMaximumValue();
+    // cout<<lengthOfList();
     return 0;
 }
